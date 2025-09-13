@@ -1,0 +1,48 @@
+---
+import  "../../styles/global.css"
+const objectives = [
+  {
+    title: "Our Mission",
+    desc: "To create an inclusive environment where students can explore, learn, and innovate in the field of technology while building meaningful connections with peers and industry professionals.",
+    icon: "/assets/images/target.svg",
+    color: "#057AC033 #057AC00D"
+  },
+  {
+    title: "Our Vision",
+    desc: "To be the leading tech community in Nepal that empowers students to become innovative leaders and contributors to the global technology ecosystem.",
+    icon: "/assets/images/vision.svg",
+    color: "#24A64433 #24A6440D"
+  },
+  {
+    title: "Our Values",
+    desc: "Innovation, collaboration, inclusivity, and continuous learning form the foundation of our community. We celebrate diversity and encourage creative problem-solving.",
+    icon: "/assets/images/value.svg",
+    color: "#09467133 #0946710D"
+  }
+];
+---
+
+<section class="bg-[#F0F4F84D] p-[64px]">
+<div class="flex-col mb-[64px] bg-[#F0F4F84D]">
+  <header class="text-[48px] font-bold text-center gap-x-2 mb-[14px]">
+  <span class="text-[#1E293B]">About</span><span class="text-[#057AC0]"> Nepal TeK Community</span>
+</header>
+
+<p class="text-[#475569] text-[18px] max-w-[896px] mx-auto">
+  Nepal TeK Community (NTC) is a vibrant student-led organization at NCIT, Nepal, dedicated to fostering innovation, collaboration, and technological excellence among students. We believe in the power of community-driven learning and the potential of young minds to shape the future of technology.
+</p>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-[32px] bg-[#F0F4F84D]">
+  {objectives.map((obj) => (
+    <div class="bg-[#FFFFFF1A] h-[350px] max-w-[394.66px] rounded-[12px] border-[#FFFFFF33] border-[1px] p-8 text-left shadow-[0px_1px_2px_-1px_#0000001A,0px_1px_3px_0px_#0000001A] backdrop-blur-[10px] py-[25px] px-[1px]">
+      <div class={`w-[64px] h-[64px] mt-[32px] ml-[32px] flex items-center justify-center rounded-[33554400px] mb-4`} style={`background: linear-gradient(135deg, ${obj.color.split(" ")[0]}, ${obj.color.split(" ")[1]})`}>
+        <span class="text-2xl"><img src={obj.icon}></span>
+      </div>
+      <h3 class="text-lg text-[#1E293B] ml-[32px] font-semibold text-[20px]">{obj.title}</h3>
+      <p class="text-[#475569] text-[16px] w-[328.66] h-[104] flex font-normal justify-center items-center ml-[32px] mr-[12px]">{obj.desc}</p>
+    </div>
+  ))}
+</div>
+</section>
+
